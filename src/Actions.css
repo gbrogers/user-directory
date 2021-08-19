@@ -1,0 +1,26 @@
+.navbar {
+  background-color: rgb(39, 39, 39);
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+}
+.editBtns {
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+}
+.editBtns button {
+  background-color: rgb(46, 175, 226);
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: aliceblue;
+  font-weight: 600;
+}
+.moveBtn {
+  background-color: rgb(39, 39, 39);
+  border: none;
+  color: aliceblue;
+  font-size: 15px;
+}

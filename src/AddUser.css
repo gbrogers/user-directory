@@ -1,7 +1,6 @@
 form {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: flex-start;
   padding-left: 20px;
 }
@@ -11,7 +10,6 @@ form div {
 label {
   color: white;
   margin-right: 5px;
-  /* margin-bottom: 30px; */
 }
 input {
   border-radius: 5px;

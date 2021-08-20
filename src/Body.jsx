@@ -3,7 +3,7 @@ import database from "./data";
 import "./Body.css";
 
 export default function Body(props) {
-  const { id, name, city, country, title, employer, favoriteMovies } =
+  const { name, city, country, title, employer, favoriteMovies } =
     database[props.id];
 
   return (

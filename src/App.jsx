@@ -1,11 +1,12 @@
 import react, { useState } from "react";
 import "./App.css";
 import Body from "./Body";
-import database from "./data";
+import data from "./data";
 import Actions from "./Actions";
 import AddUser from "./AddUser";
 
 function App() {
+  const [database, setDatabase] = useState(data);
   const [id, setId] = useState(database[0].id);
   const [toggleBody, setToggleBody] = useState(true);
   const [toggleActions, setToggleActions] = useState(true);
@@ -52,6 +53,8 @@ function App() {
             setToggleActions={setToggleActions}
             setToggleAddUser={setToggleAddUser}
             toggleAddUser={toggleAddUser}
+            setDatabase={setDatabase}
+            database={database}
           />
         )}
       </body>

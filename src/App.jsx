@@ -3,9 +3,14 @@ import "./App.css";
 import Body from "./Body";
 import database from "./data";
 import Actions from "./Actions";
+import AddUser from "./AddUser";
 
 function App() {
   const [id, setId] = useState(database[0].id);
+  const [toggleBody, setToggleBody] = useState(true);
+  const [toggleActions, setToggleActions] = useState(true);
+  const [toggleAddUser, setToggleAddUser] = useState(false);
+
   function goPrevious() {
     if (id > 0) {
       setId(id - 1);
@@ -29,9 +34,26 @@ function App() {
       </header>
       <body>
         <div className="userCard">
-          <Body id={id} />
-          <Actions goNext={goNext} goPrevious={goPrevious} />
+          {toggleBody && <Body id={id} />}
+          {toggleActions && (
+            <Actions
+              goNext={goNext}
+              goPrevious={goPrevious}
+              setToggleBody={setToggleBody}
+              setToggleActions={setToggleActions}
+              setToggleAddUser={setToggleAddUser}
+            />
+          )}
         </div>
+        {toggleAddUser && (
+          <AddUser
+            setToggleAddUser={setToggleAddUser}
+            setToggleBody={setToggleBody}
+            setToggleActions={setToggleActions}
+            setToggleAddUser={setToggleAddUser}
+            toggleAddUser={toggleAddUser}
+          />
+        )}
       </body>
     </div>
   );

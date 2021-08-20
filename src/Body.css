@@ -7,7 +7,7 @@ h1 {
 }
 .userContent {
   padding: 20px;
-  position: relative;
+  /* position: relative; */
 }
 
 ol {
@@ -18,7 +18,10 @@ span {
   font-weight: 700;
 }
 .counter {
-  position: absolute;
-  margin-left: 450px;
-  margin-top: -50px;
+  font-weight: 700;
+  font-size: 20px;
+}
+.top-section {
+  display: flex;
+  justify-content: space-between;
 }

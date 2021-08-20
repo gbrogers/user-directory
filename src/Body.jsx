@@ -1,4 +1,4 @@
-import react from "react";
+import react, { useState } from "react";
 import database from "./data";
 import "./Body.css";
 
@@ -8,8 +8,12 @@ export default function Body(props) {
 
   return (
     <div className="userContent">
-      <h1>{`${name.first} ${name.last}`}</h1>
-      <aside className="counter">{`${props.id + 1}/${database.length}`}</aside>
+      <div className="top-section">
+        <h1>{`${name.first} ${name.last}`}</h1>
+        <aside className="counter">{`${props.id + 1}/${
+          database.length
+        }`}</aside>
+      </div>
       <p>
         <span>From: </span>
         {`${city}, ${country}`}

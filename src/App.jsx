@@ -22,7 +22,7 @@ function App() {
 
   function goNext() {
     if (id < database.length - 1) {
-      setId(id + 1);
+      setId((previousState) => previousState + 1);
     } else {
       return;
     }
@@ -38,6 +38,8 @@ function App() {
           {toggleBody && <Body id={id} />}
           {toggleActions && (
             <Actions
+              id={id}
+              database={database}
               goNext={goNext}
               goPrevious={goPrevious}
               setToggleBody={setToggleBody}
